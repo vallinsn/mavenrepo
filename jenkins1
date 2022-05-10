@@ -1,0 +1,17 @@
+pipeline {
+  agent {lable 'linux'}
+  
+  stages {
+   stages ('Hello') {
+     steps {
+      sh '''
+        ansible --version
+        ansible-playbook --version
+        '''
+        }
+      }
+    }
+  }
+  
+  
+  
